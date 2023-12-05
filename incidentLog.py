@@ -15,6 +15,7 @@ if __name__ == '__main__':
 
     def callback(event):
         if type(event) in [NewSession, SessionInfo]:
+            s.enableRealtimeReport(1000)
             serverName = event.serverName
             serverName = serverName.replace(" ", "_")
             session = event.name
